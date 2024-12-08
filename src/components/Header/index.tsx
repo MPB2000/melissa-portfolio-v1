@@ -7,8 +7,7 @@ export const Header = () => {
   return (
     <Flex
       style={{
-        width: "100vw",
-        height: 60,
+        height: 50,
         alignItems: "center",
         gap: 20,
         justifyContent: "flex-end",

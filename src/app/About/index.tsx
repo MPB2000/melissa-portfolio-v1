@@ -8,7 +8,6 @@ export const About = () => {
     <Flex
       vertical={true}
       style={{
-        width: "100vw",
         height: "50vh",
         background: Colors.DARKGREY,
       }}
