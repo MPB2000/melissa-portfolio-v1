@@ -14,7 +14,7 @@ export const Footer = () => {
         background: Colors.MAROON,
       }}
     >
-      <div style={{ display: "flex", gap: 10 }}>
+      <Flex style={{ gap: 40 }}>
         <Link
           href="https://github.com/MPB2000"
           target="_blank"
@@ -39,7 +39,7 @@ export const Footer = () => {
         >
           Instagram
         </Link>
-      </div>
+      </Flex>
       <Text style={{ color: "#fff" }}>
         &copy; {new Date().getFullYear()} Melissa Paige Boudville. All rights
         reserved.
