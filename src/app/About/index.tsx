@@ -25,10 +25,11 @@ export const About = () => {
         ]}
         wrapper="span"
         speed={50}
-        style={{ fontSize: "2em", display: "inline-block" }}
+        style={{ fontSize: "2em", display: "inline-block", color: "#fff"}}
         repeat={Infinity}
+        
       />
-      <Paragraph>
+      <Paragraph style={{ color: "#fff" }}>
         Hello! I'm Melissa Paige Boudville, a passionate software developer with
         a love for problem-solving and creating meaningful solutions. I thrive
         on building impactful applications and constantly learning new
