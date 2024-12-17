@@ -1,20 +1,43 @@
 import { Colors } from "@/theme/Colors";
 import { Flex, Typography } from "antd";
+import styled from "styled-components";
 const { Link, Text } = Typography;
+
+const FooterContainer = styled(Flex)`
+  height: 50px;
+  align-items: center;
+  gap: 20px;
+  padding-inline: 20px;
+  justify-content: space-evenly;
+  background: ${Colors.MAROON};
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+`;
+
+const LinksContainer = styled(Flex)`
+  gap: 40px;
+
+  @media (max-width: 500px) {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const FooterText = styled(Text)`
+  color: #fff;
+  text-align: center;
+`;
 
 export const Footer = () => {
   return (
-    <Flex
-      style={{
-        height: 50,
-        alignItems: "center",
-        gap: 20,
-        paddingInline: 20,
-        justifyContent: "space-evenly",
-        background: Colors.MAROON,
-      }}
-    >
-      <Flex style={{ gap: 40 }}>
+    <FooterContainer>
+      <LinksContainer>
         <Link
           href="https://github.com/MPB2000"
           target="_blank"
@@ -39,11 +62,10 @@ export const Footer = () => {
         >
           Instagram
         </Link>
-      </Flex>
-      <Text style={{ color: "#fff" }}>
-        &copy; {new Date().getFullYear()} Melissa Paige Boudville. All rights
-        reserved.
-      </Text>
-    </Flex>
+      </LinksContainer>
+      <FooterText>
+        &copy; {new Date().getFullYear()} Melissa Paige Boudville. All rights reserved.
+      </FooterText>
+    </FooterContainer>
   );
 };
