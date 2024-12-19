@@ -1,18 +1,31 @@
+import styled from "styled-components";
 import { Colors } from "@/theme/Colors";
-import { Flex, Typography } from "antd";
+import { Typography } from "antd";
 const { Paragraph } = Typography;
 import { TypeAnimation } from "react-type-animation";
 
+const StyledFlex = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  background: ${Colors.DARKGREY};
+`;
+
+const StyledTypeAnimation = styled(TypeAnimation)`
+  font-size: 2em;
+  display: inline-block;
+  color: #fff;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  color: #fff;
+  font-size: 1em;
+`;
+
 export const About = () => {
   return (
-    <Flex
-      vertical={true}
-      style={{
-        height: "50vh",
-        background: Colors.DARKGREY,
-      }}
-    >
-      <TypeAnimation
+    <StyledFlex>
+      <StyledTypeAnimation
         sequence={[
           "full",
           2000, // Wait 2 seconds
@@ -25,16 +38,14 @@ export const About = () => {
         ]}
         wrapper="span"
         speed={50}
-        style={{ fontSize: "2em", display: "inline-block", color: "#fff"}}
         repeat={Infinity}
-        
       />
-      <Paragraph style={{ color: "#fff" }}>
+      <StyledParagraph>
         Hello! I'm Melissa Paige Boudville, a passionate software developer with
         a love for problem-solving and creating meaningful solutions. I thrive
         on building impactful applications and constantly learning new
         technologies to improve my craft.
-      </Paragraph>
-    </Flex>
+      </StyledParagraph>
+    </StyledFlex>
   );
 };

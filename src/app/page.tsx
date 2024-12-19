@@ -1,5 +1,4 @@
 "use client";
-import { TypeAnimation } from "react-type-animation";
 import { Home } from "./Home";
 import { Header } from "@/components/Header";
 import { About } from "./About";
